@@ -13,3 +13,49 @@ while (number>0):
     number-=1
 
 print(graph)
+
+
+
+
+
+""" ------------------------------------------------------------------------------------------- """
+graph={
+    "a":["b","c","a"],
+    "b":["c","d"],
+    "c":["d","a"],
+    "d":["c"]
+}
+
+""" Delete  """
+
+x=input("enter node to delete")
+if x in graph:
+    del graph[x]
+for y in graph.values():
+    if x in y:
+        y.remove(x)
+
+print(graph)
+
+
+""" update """
+x=input("enter node to update")
+if x in graph:
+    y=input("enter node to add to this node:")
+    for z in graph.values():
+        if x in z:
+            z.remove(x)
+            z.append(y)
+    graph[y]=graph.pop(x)
+
+            
+
+print(graph)
+
+""" Finding circular cycle in node """
+for n,m in graph.items():
+    for n in m:
+        if n in graph and m == graph[n]:
+            print(f"found the match {n} with {m}")
+        else:
+            pass
