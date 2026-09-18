@@ -1,5 +1,3 @@
-""" <<<<<<< HEAD
-
 class Graph:
     def __init__(self):
         self.graph={}
@@ -73,5 +71,3 @@ class Graph:
 my_graph = Graph()       # 1. Create an object from the Graph class
 my_graph.create_graph()  # 2. Call the method to build it via inputs
 my_graph.display()       # 3. Call the method to print it
->>>>>>> b7b68bc9df63f4f2d69a37cd12dde8da81f26611
- """
